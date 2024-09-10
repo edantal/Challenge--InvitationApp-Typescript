@@ -1,0 +1,19 @@
+@use 'styles/_colors.scss';
+@use 'styles/_base.scss';
+@use 'styles/_list.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1380px) {
+  .container {
+    width: 1400px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+  }
+}
