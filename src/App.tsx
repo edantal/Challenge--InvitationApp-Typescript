@@ -19,19 +19,25 @@ function App() {
       name: 'Art Vandelay',
       age: 38,
       img: 'https://i.pravatar.cc/273',
-      note: 'string',
+      note: 'Architect',
     },
     {
       name: 'Kel Varnsen',
       age: 37,
       img: 'https://i.pravatar.cc/274',
-      note: 'string',
+      note: 'Advantage, Varnsen!',
     },
     {
       name: 'H.E. Pennypacker',
       age: 42,
       img: 'https://i.pravatar.cc/275',
-      note: 'string',
+      note: 'Who is watching the Saab factory?',
+    },
+    {
+      name: 'Dr. Van Nostrand',
+      age: 51,
+      img: 'https://i.pravatar.cc/276',
+      note: 'From the Hofermandorf clinic in Belgium, the Netherlands?',
     },
   ])
 
