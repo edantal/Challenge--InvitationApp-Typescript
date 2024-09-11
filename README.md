@@ -31,8 +31,21 @@ This challenge repository is using ReactJS, TypeScript and SASS.
 <details>
   <summary>Resources</summary>
 
-- [Coolors](https://coolors.co/090c08-474056-757083-8a95a5-b9c6ae) - Generation of color palette
+- [Coolors](https://coolors.co) - Generation of color palette
+- [Schemecolor](https://www.schemecolor.com) - Generation of color palette
 - [GoogleFonts: Poppins](https://fonts.google.com/specimen/Poppins) - Font for headings
 - [GoogleFonts: Roboto](https://fonts.google.com/specimen/Roboto) - Font for body text
+- [Pravatar](https://i.pravatar.cc) - Generation of random avatar images
+- [Remix Icon](https://remixicon.com)
 
 </details>
+
+<!--
+
+---
+
+### Source
+
+[React with TypeScript](https://youtu.be/jrKcJxF0lAU?si=W5AEhURMTmxQZi1o)
+
+-->
