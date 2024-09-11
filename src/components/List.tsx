@@ -1,15 +1,6 @@
 import Card from './Card'
 import ElementOrnament from './svg/ElementOrnament'
-
-interface IProps {
-  people: {
-    name: string
-    age: number
-    img: string
-    note?: string
-    confirmed?: boolean
-  }[]
-}
+import { IState as IProps } from '../App'
 
 const List: React.FC<IProps> = ({ people }) => {
   const renderList = (): JSX.Element[] => {

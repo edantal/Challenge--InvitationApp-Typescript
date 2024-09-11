@@ -6,7 +6,7 @@ import AddToList from './components/AddToList'
 import TitleOrnament from './components/svg/TitleOrnament'
 import Footer from './components/Footer'
 
-interface IState {
+export interface IState {
   people: {
     name: string
     age: number
@@ -21,28 +21,28 @@ function App() {
     {
       name: 'Art Vandelay',
       age: +491668995623,
-      img: 'https://i.pravatar.cc/273',
+      img: '273',
       note: 'Architect',
       confirmed: true,
     },
     {
       name: 'Kel Varnsen',
       age: +491668995623,
-      img: 'https://i.pravatar.cc/274',
+      img: '274',
       note: 'Advantage, Varnsen!',
       confirmed: false,
     },
     {
       name: 'H.E. Pennypacker',
       age: +491668995623,
-      img: 'https://i.pravatar.cc/275',
+      img: '275',
       note: 'Who is watching the Saab factory?',
       confirmed: false,
     },
     {
       name: 'Dr. Van Nostrand',
       age: +491668995623,
-      img: 'https://i.pravatar.cc/276',
+      img: '276',
       note: 'From the Hofermandorf clinic in Belgium, the Netherlands?',
       confirmed: true,
     },
@@ -55,7 +55,7 @@ function App() {
       </h1>
       <div className='container'>
         <List people={people} />
-        <AddToList />
+        <AddToList people={people} setPeople={setPeople} />
       </div>
       <Footer />
     </div>

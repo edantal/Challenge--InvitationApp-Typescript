@@ -82,9 +82,9 @@
   display: flex;
   flex-direction: column;
   width: 30rem;
-  padding: 4rem 3rem;
+  padding: 1rem 3rem 4rem;
   margin: 0 auto;
-  border: 1px solid $_color-dark;
+  border: 1px solid $_color-primary;
   background-color: $_color-tertiary;
 
   & > svg {
@@ -94,10 +94,16 @@
     transform: translate(80%, -5%) rotate(180deg);
   }
 
+  & > h2 {
+    font-family: $_font-headings;
+    font-size: 1.2rem;
+  }
+
   &__input {
-    padding: 0.5rem;
-    font-size: 1rem;
     margin: 0.3rem 0rem;
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1rem;
 
     &::placeholder {
       font-size: 0.8em;
@@ -110,9 +116,11 @@
     max-height: 10rem;
     margin: 0.3rem 0rem;
     padding: 0.5rem;
-    font-family: $_font-body;
+    outline: none;
     font-size: 1rem;
     resize: vertical;
+    font-family: $_font-body;
+    font-size: 1rem;
 
     &::placeholder {
       font-size: 0.8em;
@@ -121,11 +129,20 @@
   }
 
   &__btn {
-    padding: 0.5rem;
-    cursor: pointer;
-    background-color: #0b5468;
-    font-weight: 700;
-    color: white;
+    width: 50%;
+    margin: 1rem auto 0;
+    padding: 1rem 0.5rem;
+    background-color: $_color-primary;
     border: none;
+    box-shadow: 0px 3px 10px rgba($_color-dark, 0.1);
+    font-weight: 700;
+    color: $_color-light;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: $_color-dark;
+      box-shadow: 0px 10px 10px rgba($_color-dark, 0.4);
+    }
   }
 }
