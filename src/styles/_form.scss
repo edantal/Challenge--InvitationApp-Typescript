@@ -20,17 +20,40 @@
     font-size: 1.2rem;
   }
 
-  &__field {
+  & > .msg {
     display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
+    align-items: center;
+    gap: 0.5rem;
     width: 80%;
     margin: 0 auto;
+    padding: 1rem 2rem;
+    border: 1px solid $_color-unconfirmed;
+    border-radius: 5px;
+    background-color: lighten($_color-unconfirmed, 30);
+    font-size: 0.9rem;
+    color: $_color-unconfirmed;
+    text-align: left;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 80%;
+    margin: 0.3rem auto;
     font-size: 1rem;
+
+    & label {
+      font-size: 0.8em;
+      line-height: 1;
+      color: lighten($_color-dark, 10);
+    }
   }
 
   &__input {
-    margin: 0.3rem 0rem;
+    width: 100%;
     padding: 0.5rem;
     outline: none;
     font-size: inherit;
@@ -42,9 +65,9 @@
   }
 
   &__textarea {
+    width: 100%;
     min-height: 2rem;
     max-height: 10rem;
-    margin: 0.3rem 0rem;
     padding: 0.5rem;
     outline: none;
     font-size: 1rem;

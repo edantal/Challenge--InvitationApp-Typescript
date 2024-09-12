@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ElementOrnament from './svg/ElementOrnament'
 import { IState as Props } from '../App'
+import Message from './Message'
 
 interface IProps {
   people: Props['people']
@@ -16,6 +17,8 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
     confirmed: false,
   })
 
+  const [error, setError] = useState<string>('')
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
@@ -28,8 +31,15 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
   }
 
   const handleClick = (): void => {
-    if (!input.name || !input.age || !input.img) return
+    if (!input.name) {
+      setError('Bitte geben Sie den Namen des Gastes ein')
+      return
+    } else if (!input.age) {
+      setError('Bitte geben Sie die Telefonnummer ein')
+      return
+    }
 
+    setError('')
     setPeople([
       ...people,
       {
@@ -53,11 +63,13 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
   return (
     <div className='add-to-list'>
       <ElementOrnament />
+
+      {error && <Message msg={error} />}
       <h2>Einen Gast hinzufügen</h2>
       <div className='add-to-list__field'>
         <input
           type='text'
-          placeholder='Name'
+          placeholder='Name*'
           name='name'
           className='add-to-list__input'
           value={input.name}
@@ -67,7 +79,7 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
       <div className='add-to-list__field'>
         <input
           type='text'
-          placeholder='Telefonnummer'
+          placeholder='Telefonnummer*'
           name='age'
           className='add-to-list__input'
           value={input.age}
@@ -97,11 +109,12 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
         <input
           type='checkbox'
           name='confirmed'
+          id='confirmed'
           className='add-to-list__checkbox'
           checked={input.confirmed}
           onChange={handleChange}
-        />{' '}
-        Bestätigt
+        />
+        <label htmlFor='confirmed'>Bestätigt</label>
       </div>
       <button className='add-to-list__btn' onClick={handleClick}>
         Zur Liste hinzufügen
