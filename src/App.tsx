@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 export interface IState {
   people: {
     name: string
-    age: number
+    phone: number
     img: string
     note?: string
     confirmed?: boolean
@@ -20,28 +20,28 @@ function App() {
   const [people, setPeople] = useState<IState['people']>([
     {
       name: 'Art Vandelay',
-      age: +491668995623,
+      phone: +491668995623,
       img: '273',
       note: 'Architect',
       confirmed: true,
     },
     {
       name: 'Kel Varnsen',
-      age: +491668995623,
+      phone: +491668995623,
       img: '274',
       note: 'Advantage, Varnsen!',
       confirmed: false,
     },
     {
       name: 'H.E. Pennypacker',
-      age: +491668995623,
+      phone: +491668995623,
       img: '275',
       note: 'Who is watching the Saab factory?',
       confirmed: false,
     },
     {
       name: 'Dr. Van Nostrand',
-      age: +491668995623,
+      phone: +491668995623,
       img: '276',
       note: 'From the Hofermandorf clinic in Belgium, the Netherlands?',
       confirmed: true,

@@ -11,7 +11,7 @@ interface IProps {
 const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
   const [input, setInput] = useState({
     name: '',
-    age: '',
+    phone: '',
     img: '',
     note: '',
     confirmed: false,
@@ -34,7 +34,7 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
     if (!input.name) {
       setError('Bitte geben Sie den Namen des Gastes ein')
       return
-    } else if (!input.age) {
+    } else if (!input.phone) {
       setError('Bitte geben Sie die Telefonnummer ein')
       return
     }
@@ -44,7 +44,7 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
       ...people,
       {
         name: input.name,
-        age: parseInt(input.age),
+        phone: parseInt(input.phone),
         img: input.img,
         note: input.note,
         confirmed: input.confirmed,
@@ -53,7 +53,7 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
 
     setInput({
       name: '',
-      age: '',
+      phone: '',
       img: '',
       note: '',
       confirmed: false,
@@ -80,9 +80,9 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
         <input
           type='text'
           placeholder='Telefonnummer*'
-          name='age'
+          name='phone'
           className='add-to-list__input'
-          value={input.age}
+          value={input.phone}
           onChange={handleChange}
         />
       </div>

@@ -3,7 +3,7 @@ import { RiCalendarCheckFill, RiCalendarCloseFill } from '@remixicon/react'
 interface IProps {
   person: {
     name: string
-    age: number
+    phone: number
     img: string
     note?: string
     confirmed?: boolean
@@ -21,7 +21,7 @@ const Card: React.FC<IProps> = ({ person }) => {
         />
         <h2 className='list__name'>{person.name}</h2>
       </div>
-      <p>{person.age}</p>
+      <p>{person.phone}</p>
       <p className='list__note'>{person.note}</p>
       <p className={`check ${person.confirmed && 'confirmed'}`}>
         {person.confirmed ? <RiCalendarCheckFill /> : <RiCalendarCloseFill />}
