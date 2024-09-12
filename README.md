@@ -40,6 +40,10 @@ This challenge repository is using ReactJS, TypeScript and SASS.
 
 </details>
 
+### Preview
+
+[View Design](https://raw.githubusercontent.com/edantal/Challenge--InvitationApp-Typescript/main/preview.jpg)
+
 <!--
 
 ---
