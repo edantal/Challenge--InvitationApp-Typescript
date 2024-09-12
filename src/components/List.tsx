@@ -4,7 +4,7 @@ import { IState as IProps } from '../App'
 
 const List: React.FC<IProps> = ({ people }) => {
   const renderList = (): JSX.Element[] => {
-    return people.map(person => <Card person={person} />)
+    return people.map((person, index) => <Card key={index} person={person} />)
   }
 
   return (
